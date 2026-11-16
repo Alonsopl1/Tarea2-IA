@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Configuración local y secretos
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Temporales, respaldos y salidas generadas
+*.bak
+*.tmp
+*~
+*.zip
+*.docx
+resultados_evaluacion.csv

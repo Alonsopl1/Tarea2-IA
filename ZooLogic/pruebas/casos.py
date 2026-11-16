@@ -1,0 +1,23 @@
+"""20 preguntas de evaluación basadas en las 18 pruebas originales + 2 adicionales."""
+PREGUNTAS = [
+    '¿La ballena azul es un animal diminuto?',
+    'Lista todos los animales diminutos',
+    '¿El lobo es un animal pequeño?',
+    '¿El gato es un animal mediano?',
+    'Listar todos los animales grandes.',
+    '¿El elefante es un animal colosal?',
+    '¿El león pesa 190 kg?',
+    '¿Cuántos kilos pesa la jirafa?',
+    '¿Qué animales pesan 1 kg?',
+    '¿El elefante es más pesado que cuáles animales?',
+    '¿El tigre es más pesado que cuáles animales?',
+    '¿El conejo es más liviano que cuáles animales?',
+    '¿El lobo es más liviano que cuáles animales?',
+    '¿El jaguar pesa lo mismo que cuáles animales?',
+    '¿El gato pesa lo mismo que cuáles animales?',
+    '¿El hipopótamo es más pesado que la jirafa?',
+    'Listar todos los animales colosales',
+    '¿El loro pesa lo mismo que cuáles animales?',
+    '¿Qué animales pesan más que el tigre?',
+    '¿Cuál es la categoría del oso polar?',
+]
