@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.git/
+.venv/
+.vscode/
+*.zip
+resultados_evaluacion.csv
+Informe_Proyecto_2.docx

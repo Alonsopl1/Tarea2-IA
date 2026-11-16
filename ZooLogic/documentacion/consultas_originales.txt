@@ -1,0 +1,59 @@
+% Consultas originales de la primera entrega: ejecutar individualmente en SWI-Prolog
+% No incluir dentro de conocimiento.pl: son pruebas, no hechos ni reglas.
+
+
+% 1) ¿La ballena azul es un animal diminuto?
+?- diminuto(ballena_azul).
+
+% 2) Listar todos los animales diminutos.
+?- diminuto(X).
+
+% 3) ¿El lobo es un animal pequeño?
+?- pequeno(lobo).
+
+% 4) ¿El gato es un animal mediano?
+?- mediano(gato).
+
+% 5) Listar todos los animales grandes.
+?- grande(X).
+
+% 6) ¿El elefante es un animal colosal?
+?- colosal(elefante).
+
+% 7) ¿El león pesa 190 kg?
+?- peso(leon,190).
+
+% 8) ¿Cuántos kilos pesa la jirafa?
+?- peso(jirafa,X).
+
+% 9) ¿Qué animales pesan 1 kg?
+?- peso(X,1).
+
+% ----- Consultas de comparación -----
+
+% 10) ¿El elefante es más pesado que cuáles animales?
+?- mas_pesado_que(elefante,X).
+
+% 11) ¿El tigre es más pesado que cuáles animales?
+?- mas_pesado_que(tigre,X).
+
+% 12) ¿El conejo es más liviano que cuáles animales?
+?- mas_liviano_que(conejo,X).
+
+% 13) ¿El lobo es más liviano que cuáles animales?
+?- mas_liviano_que(lobo,X).
+
+% 14) ¿El jaguar pesa lo mismo que cuáles animales?
+?- mismo_peso(jaguar,X).
+
+% 15) ¿El gato pesa lo mismo que cuáles animales?
+?- mismo_peso(gato,X).
+
+% 16) ¿El hipopótamo es más pesado que la jirafa?
+?- mas_pesado_que(hipopotamo,jirafa).
+
+% 17) Listar todos los animales colosales.
+?- colosal(X).
+
+% 18) ¿El loro pesa lo mismo que cuáles animales?
+?- mismo_peso(loro,X).

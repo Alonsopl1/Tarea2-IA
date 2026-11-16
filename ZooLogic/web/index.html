@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1425">
+  <title>ZooLogic — Prolog y LLM</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="logo" aria-hidden="true">Z<span>●</span></div>
+    <div><h1>ZooLogic</h1><p>Fundamentos de Inteligencia Artificial · Proyecto 2</p></div>
+    <div class="live"><span class="led"></span><span id="status">Comprobando motor...</span></div>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <section class="panel">
+        <span class="eyebrow">MODO DE RESPUESTA</span>
+        <label for="modo" class="sr-only">Motor a utilizar</label>
+        <select id="modo">
+          <option value="prolog">01 · Prolog + Python</option>
+          <option value="llm">02 · LLM traductor + Prolog</option>
+        </select>
+        <div class="mode-info" id="modeInfo">Python identifica una consulta permitida y Prolog aplica las reglas.</div>
+      </section>
+      <section class="panel">
+        <span class="eyebrow">BASE DE CONOCIMIENTOS</span>
+        <div class="metrics">
+          <div><strong>20</strong><small>animales</small></div>
+          <div><strong>8</strong><small>reglas</small></div>
+        </div>
+        <p class="muted">Peso promedio aproximado de adultos (kg). Los datos son los del proyecto original.</p>
+        <button class="text-btn" id="showData">Ver hechos registrados ↗</button>
+      </section>
+      <section class="panel">
+        <span class="eyebrow">PRUEBA UNA PREGUNTA</span>
+        <div class="examples" id="examples">
+          <button data-question="¿Cuánto pesa la jirafa?">¿Cuánto pesa la jirafa?</button>
+          <button data-question="¿Qué animales son colosales?">¿Qué animales son colosales?</button>
+          <button data-question="¿El tigre pesa más que el león?">¿El tigre pesa más que el león?</button>
+          <button data-question="¿Qué animales pesan lo mismo que el gato?">¿Qué animales pesan lo mismo que el gato?</button>
+          <button data-question="¿Qué animales pesan 1 kg?">¿Qué animales pesan 1 kg?</button>
+          <button data-question="¿Cuántos años vive el león?">¿Cuántos años vive el león?</button>
+        </div>
+      </section>
+    </aside>
+    <section class="chat-container" aria-label="Conversación con ZooLogic">
+      <div class="chat-top"><div><h2>Asistente de clasificación animal</h2><p>Consultas de pesos, categorías y comparaciones</p></div><button class="reset" id="clearChat" title="Borrar conversación">Limpiar</button></div>
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="msg bot"><div class="avatar">Z</div><div class="bubble"><div class="sender">ZooLogic</div>¡Hola! Soy ZooLogic 🐾. Conozco los pesos de 20 animales y 8 reglas para compararlos y clasificarlos. Elige un modo y hazme una pregunta.</div></div>
+      </div>
+      <div class="composer">
+        <form id="chatForm"><label for="pregunta" class="sr-only">Tu pregunta</label><input id="pregunta" name="pregunta" autocomplete="off" maxlength="1000" placeholder="Escribe tu pregunta sobre animales..." required><button type="submit" id="send">Enviar <span aria-hidden="true">→</span></button></form>
+        <p>Sin respuestas prefabricadas · Consulta Prolog visible · Dos formas de traducir, un mismo motor lógico</p>
+      </div>
+    </section>
+  </main>
+  <footer>Daniel Contreras · Gabriel González · Alonso Pailamilla &nbsp;·&nbsp; CINF103</footer>
+</div>
+<dialog id="dataDialog"><div class="dialog-head"><h2>Hechos de conocimiento</h2><button id="closeDialog" aria-label="Cerrar">✕</button></div><p>Los datos se leen del archivo <code>conocimiento.pl</code>.</p><div class="table-scroll"><table><thead><tr><th>Animal</th><th>Peso aprox.</th></tr></thead><tbody id="factsBody"></tbody></table></div></dialog>
+<script src="/script.js"></script>
+</body>
+</html>
